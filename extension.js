@@ -725,9 +725,9 @@ function getWorkArea(monitor) {
     let bottomPanelSize = (isPrimaryMonitor(monitor) && gridSettings[SETTINGS_BOTTOM_PANEL]) ? Main.panel.actor.height : 0;
     return {
         x: monitor.x + insets.left,
-        y: monitor.y + insets.top + topPanelSize,
+        y: monitor.y + insets.top,
         width: monitor.width - insets.left - insets.right,
-        height: monitor.height - insets.top - insets.bottom - topPanelSize - bottomPanelSize
+        height: monitor.height - insets.top - insets.bottom - bottomPanelSize
     };
 }
 
